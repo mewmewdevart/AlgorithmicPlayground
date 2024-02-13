@@ -22,6 +22,6 @@ Como podemos observar, 2 elevado a 7 é igual a 128. Portanto, seria necessário
 Portanto, o número máximo de etapas necessárias para encontrar o nome desejado é aproximadamente 7, conforme sua explicação correta do logaritmo base 2.
 
 **Observe os scripts**
-- `pesquisaBinaria_00.py`(pesquisaBinaria_00.py)
+- [pesquisaBinaria_00.py](pesquisaBinaria_00.py) : Revela a posição do item dentro de um array de opções!
 
 ***
