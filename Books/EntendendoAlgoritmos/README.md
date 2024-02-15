@@ -21,7 +21,22 @@ Como podemos observar, 2 elevado a 7 é igual a 128. Portanto, seria necessário
 
 Portanto, o número máximo de etapas necessárias para encontrar o nome desejado é aproximadamente 7, conforme sua explicação correta do logaritmo base 2.
 
-**Observe os scripts**
+**Observe o scripts**
 - [pesquisaBinaria_00.py](pesquisaBinaria_00.py) : Revela a posição do item dentro de um array de opções!
+
+
+**Execução BIG O**
+- O (log n) : Tempo Algortimos : Ex- Pesquisa Binaria
+- O (n) : Tempo Linear : Ex - Pesquisa Simples
+- O (n * log n) : Ex - Um algoritmo rapido de ordenação, como a a ordenação quicksort
+- O (n²) : Ex - Um algoritmo lento de ordenação, como a ordenação por seleção
+- O (n!) : Ex - Um algoritmo bastante lento, como o do caixeiro viajante
+
+##### Recapitulando:
+- A pesquisa binaria é muito mais rapida do que a simples
+- O (log n) é mais rapido do que O(n), e ainda fica mais rapdo conforme os elementos da lista aumentam
+- A rapidez de um algoritmo não é medida em segundos
+- O tempo de execução de um algoritmo é medido por meio de seu crescimento
+- O tempo de execução dos albogritmos é expresso na notação Big O
 
 ***
