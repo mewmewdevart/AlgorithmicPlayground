@@ -1,4 +1,5 @@
-### Pesquisa Binária 🔍
+### /Pesquisa Binária 🔎
+A pesquisa binária é um algoritmo de busca utilizado para encontrar um determinado elemento em uma lista ordenada, dividindo repetidamente a lista pela metade e comparando o elemento alvo com o elemento central.
 
 Na pesquisa binária, o número máximo de etapas para encontrar um item em uma lista ordenada pode ser determinado pelo logaritmo base 2 do tamanho da lista. Suponha que você tenha uma lista com 128 nomes diferentes e esteja realizando uma pesquisa binária. Qual seria o número máximo de etapas necessárias para encontrar o nome desejado?
 
