@@ -1,0 +1,156 @@
+A configurar uma aplicação para que ela escolha entre executar uma ação ou outra baseada em algum elemento;
+Comparações para as condicionais: igual, diferente, maior, menor;
+A usar a leitura do teclado com a classe Scanner;
+Trabalhar com alternativas para as condicionais e escolher a ideal para o caso escolhido;
+A utilizar estruturas de repetição com for e while.
+
+
+A trabalhar com variáveis: recurso utilizado para armazenar valores em memória;
+
+Sobre tipos primitivos:
+
+inteiros (byte, short, int, long);
+ponto flutuante (double e float);
+char: contém um único caractere;
+boolean: recebe 2 valores, true e false;
+Como representar textos em Java, utilizando a classe String;
+
+A realizar casting de valores, para resolver situações de tipos incompatíveis no momento de realizar um cálculo ou atribuição de uma variável.
+
+
+### Text Block (Java 15)
+
+**Introdução:**
+- Novidade na versão 15 do Java.
+- Facilita a representação de Strings com múltiplas linhas.
+
+**Sintaxe do Text Block:**
+- Delimitado por três aspas duplas seguidas de quebra de linha.
+- Exemplo:
+
+  ```java
+  String mensagem = """
+                    Olá, mundo!
+                    Este é um Text Block.
+                    Ele permite escrever textos com múltiplas linhas
+                    sem precisar usar caracteres de escape ou quebras de linha manualmente ou concatenações.
+                    """;
+  ```
+
+**Exemplo de Utilização:**
+- A variável "mensagem" recebe um Text Block com o texto especificado.
+
+### Formatação de Texto em Java
+
+**Método `format()`:**
+- Utilizado para formatar textos com placeholders.
+- Placeholders representados por `%` seguido de uma letra indicando o tipo de dado.
+
+**Exemplo:**
+- Formatação de texto com variáveis:
+
+  ```java
+  String nome = "Maria";
+  int idade = 30;
+  double valor = 55.9999;
+  System.out.println(String.format("Meu nome é %s, eu tenho %d anos e hoje gastei %.2f reais", nome, idade, valor));
+  ```
+
+**Text Block com `formatted()`:**
+- Mesma lógica aplicada ao Text Block usando o método `formatted()`.
+
+  ```java
+  String nome = "João";
+  int aulas = 4;
+  String mensagem = """
+                    Olá, %s!
+                    Boas vindas ao curso de Java.
+                    Teremos %d aulas para te mostrar o que é preciso para você dar o seu primeiro mergulho na linguagem!
+                    """.formatted(nome, aulas);
+  ```
+
+### Convenções de Código em Java
+
+**Regras Básicas:**
+1. Nomes de classes em PascalCase.
+   - Exemplo: `MinhaClasse`.
+2. Nomes de métodos em camelCase.
+   - Exemplo: `meuMetodo()`.
+3. Nomes de constantes em letras maiúsculas e underline.
+   - Exemplo: `MINHA_CONSTANTE`.
+4. Nomes de variáveis em camelCase.
+   - Exemplo: `minhaVariavel`.
+5. Limite de 80 caracteres por linha.
+
+**Espaçamento e Comentários:**
+- Uso de espaços para separar operadores e palavras-chave.
+- Recomendação de comentários claros e concisos, embora seja um ponto polêmico.
+
+### Tipos Primitivos em Java
+
+**Oito Tipos Primitivos:**
+1. **boolean:** Valores lógicos (true ou false).
+2. **byte:** Inteiros de 8 bits (-128 a 127).
+3. **char:** Caracteres Unicode (representado por aspas simples).
+4. **short:** Inteiros de 16 bits (-32.768 a 32.767).
+5. **int:** Inteiros de 32 bits (-2.147.483.648 a 2.147.483.647).
+6. **long:** Inteiros de 64 bits (faixa extensa).
+7. **float:** Ponto flutuante com 32 bits (precisão limitada).
+8. **double:** Ponto flutuante com 64 bits (maior precisão, até 15 dígitos).
+
+
+**Casting em Java: Implícito e Explícito**
+
+### Casting Implícito:
+
+**Definição:**
+- Conversão automática de um tipo de dado para outro sem perda de precisão.
+- Ocorre quando não há risco de dados serem perdidos ou truncados.
+
+**Exemplo:**
+```java
+int inteiro = 10;
+long longo = inteiro; // Casting implícito de int para long
+```
+
+**Explicação:**
+- `int` é convertido para `long` implicitamente, pois não há perda de dados.
+- Isso ocorre porque todos os valores inteiros cabem dentro de um long.
+
+### Casting Explícito:
+
+**Definição:**
+- Conversão manual de um tipo de dado para outro, geralmente necessário quando há risco de perda de dados.
+
+**Exemplo:**
+```java
+double decimal = 45.678;
+int inteiro = (int) decimal; // Casting explícito de double para int
+```
+
+**Explicação:**
+- Nesse caso, é necessário um casting explícito porque parte da informação pode ser perdida ao converter um número decimal para um número inteiro.
+- O `(int)` indica explicitamente a conversão para um tipo inteiro.
+
+### Considerações Gerais:
+
+- **Casting Implícito:**
+  - Ocorre automaticamente.
+  - Sem risco de perda de dados.
+
+- **Casting Explícito:**
+  - Requer intervenção manual.
+  - Pode resultar em perda de dados e requer atenção ao tipo de dados envolvidos.
+
+### Exemplo Prático:
+
+```java
+double numeroDecimal = 78.56;
+int numeroInteiro = (int) numeroDecimal; // Casting explícito
+
+System.out.println("Número Decimal: " + numeroDecimal);
+System.out.println("Número Inteiro: " + numeroInteiro);
+```
+
+- No exemplo acima, o valor decimal é convertido explicitamente para um inteiro.
+- A saída mostrará ambos os valores, destacando a diferença entre o valor original e o valor convertido.
