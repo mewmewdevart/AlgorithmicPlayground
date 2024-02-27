@@ -1,0 +1,1 @@
+console.log('Hello World!'); // Looks like  JS >:v
