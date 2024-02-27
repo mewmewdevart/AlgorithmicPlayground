@@ -12,11 +12,23 @@
     <img alt="License" src="https://img.shields.io/github/license/mewmewdevart/AlgorithmicPlayground?color=6272a4" />
 </p>
 
-## 🔗 References
+### 📂 Folders
+
+- [Books/](Books/)
+  - [EntendendoAlgoritmos/](Books/EntendendoAlgoritmos/)
+  - [JavascriptTheDefinitiveGuide/](Books/JavascriptTheDefinitiveGuide/)
+- [Courses/](Courses/)
+  - [AluraCourses/](Courses/AluraCourses/)
+  - [Scrimba/](Courses/Scrimba/)
+- [Exercises/](Exercises/)
+  - [HackerRank/](Exercises/HackerRank/)
+
+### 🔗 References
+
+- [W3schools](https://www.w3schools.com/)
 - [GeeksForGeeks](https://practice.geeksforgeeks.org/)
 - [Leet Code](https://leetcode.com/)
 - [Project Euler](https://projecteuler.net/archives)
-- [Advento of Code](https://adventofcode.com/)
-
+- [Advent of Code](https://adventofcode.com/)
 
 <p align="center"> Developed with love 💜 by Larissa Cristina Benedito (Mewmew/Larcrist). </p>
