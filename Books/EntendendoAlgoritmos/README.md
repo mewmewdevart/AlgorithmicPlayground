@@ -100,4 +100,11 @@ Você usaria um array ou uma lista encadeada para implementar essa lista? (Dica:
 **Observação 👀**: É possível usar diferentes tipos de ordenações em um projeto, imaginando em um contexto híbrido, como um array de listas encadeadas. <br>
 ![Screenshot from 2024-02-27 23-21-41](https://github.com/mewmewdevart/AlgorithmicPlayground/assets/50052600/6cd37042-a72c-4fad-a369-ab9cbaaf0df5)
 
-
+**Recapitulando:**
+- A memória do seu computador é como um conjunto gigante de gavetas.
+• Quando se quer armazenar múltiplos elementos, usa-se um array ou uma lista.
+- No array, todos os elementos são armazenados um ao lado do outro.
+- Na lista, os elementos estão espalhados e um elemento armazena o endereço do próximo elemento.
+- Arrays permitem leituras rápidas.
+- Listas encadeadas permitem rápidas inserções e eliminações.
+- Todos os elementos de um array devem ser do mesmo tipo (todos ints, todos doubles, e assim por diante).
