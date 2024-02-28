@@ -39,7 +39,7 @@ Como podemos observar, 2 elevado a 7 é igual a 128. Portanto, seria necessário
 Portanto, o número máximo de etapas necessárias para encontrar o nome desejado é aproximadamente 7, conforme sua explicação correta do logaritmo base 2.
 
 **Observe o script**
-- [00pesquisaBinaria_00.py](00pesquisaBinaria_00.py) : Revela a posição do item dentro de um array de opções!
+- [00pesquisaBinaria_00.py](00pesquisaBinaria_00.py) : Revela a posição do item dentro de um arr de opções!
 
 **Exercícios** <br> Forneça o tempo de execução considerando os termos de notação BIG O.
 1. Você tem um nome e deseja encontrar o número de telefone para esse nome em uma agenda telefônica?
@@ -76,7 +76,7 @@ As principais diferenças entre lista encadeada e array são:
 - Eficiência em Operações
 
 **Observe o script**
-- [01ordenaSelecao.py](01ordenaSelecao.py)
+- [01ordenaSelecao.py](01ordenaSelecao.py) : Ordena do menor para o maior os numeros dentro de um arr
 
 **Exercícios de Ordenação por Seleção**:
 1. Suponha que você esteja criando um aplicativo para acompanhar suas finanças:
