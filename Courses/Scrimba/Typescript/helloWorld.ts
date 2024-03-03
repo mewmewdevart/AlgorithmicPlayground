@@ -18,3 +18,4 @@ console.log('Hello World!'); // Looks like JS >:v
     - More readable code
     - Reduces the need for comments to explain what the code does
 */
+
