@@ -1,0 +1,86 @@
+:root {
+    --palette-color-background: #282A36;
+    --palette-color-current-line: #44475A;
+    --palette-color-foreground: #F8F8F2;
+    --palette-color-comment: #6272A4;
+    --palette-color-cyan: #8BE9FD;
+    --palette-color-green: #50FA7B;
+    --palette-color-orange: #FFB86C;
+    --palette-color-pink: #FF79C6;
+    --palette-color-purple: #BD93F9;
+    --palette-color-red: #FF5555;
+    --palette-color-yellow: #F1FA8C;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+input {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit;
+}
+
+button {
+	border: unset;
+	background-color: unset;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+	display: flex;
+	justify-content: center;
+	font-family: "Inria Sans", sans-serif;
+	color: var(--palette-color-foreground);
+	background-color: var(--palette-color-background);
+	height: 100%;
+	width: 100%;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
+#root {
+	width: 100%;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: unset;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: var(--palette-color-comment);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--palette-color-comment);
+}
