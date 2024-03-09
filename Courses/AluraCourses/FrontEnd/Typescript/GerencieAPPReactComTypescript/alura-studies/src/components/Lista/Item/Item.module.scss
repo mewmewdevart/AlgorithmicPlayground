@@ -1,0 +1,54 @@
+ 
+  .item {
+    background-color: var(--palette-color-comment);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+  
+    h3 {
+      margin-bottom: 8px;
+      word-break: break-all;
+    }
+  
+    span {
+      color: #D0D0D0;
+    }
+  
+    @media screen and (min-width:1280px) {
+      font-size: 1.8rem;
+    }
+  }
+  
+  .itemSelecionado {
+    border: 2px solid var(--palette-color-cyan);
+    background-color: var(--palette-color-cyan);
+    color: var( --palette-color-background);
+    span {
+      color: var( --palette-color-background);
+    }
+  }
+  
+  .itemCompletado {
+    background-color: var(--palette-color-green);
+    color: var(--palette-color-background);
+    cursor: auto;
+
+    span {
+      color: var(--palette-color-background);
+    }
+  
+    .concluido {
+      display: block;
+      background-image: url('../../../assets/images/check-mark.svg');
+      background-repeat: no-repeat;
+      background-size: 38px 38px;
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 43px;
+    }
+  }

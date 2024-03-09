@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "typeRoots": ["./src/types", "./node_modules/@types"],
     "target": "es5",
     "lib": [
       "dom",
@@ -19,6 +20,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "downlevelIteration": true,
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": [

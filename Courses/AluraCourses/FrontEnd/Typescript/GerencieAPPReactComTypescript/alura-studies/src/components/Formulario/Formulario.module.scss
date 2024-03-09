@@ -5,7 +5,7 @@
     flex-direction: column;
     grid-area: nova-tarefa;
     border-radius: 10px;
-    background-color: var(--palette-color-current-line);
+    background-color: var(--palette-color-comment);
     padding: 12px;
   
     .inputContainer {
@@ -25,7 +25,7 @@
         box-sizing: border-box;
         border: unset;
         border-radius: 5px;
-        background-color: var(--palette-color-comment);
+        background-color: #8495c7;
         
         &::placeholder {
           color: var(--palette-color-foreground);
