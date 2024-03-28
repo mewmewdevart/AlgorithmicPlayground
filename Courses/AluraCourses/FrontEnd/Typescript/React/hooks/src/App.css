@@ -1,0 +1,55 @@
+.useStates, .useEffects, .useRefs, .useReduces {
+  margin: 0 auto;
+  width:  50%;
+  min-height: 150px;
+  background-color: #BD93F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+h1, h2,  h3, h4 {
+  font-size: 1.2rem;
+  color: rgb(43, 43, 44);
+  text-align: center;
+}
+
+.useStates p, .useEffects p {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.useStates button, .useEffects button, .useReduces button {
+  margin: 0 auto;
+  font-size: 1.1rem;
+  padding: 3px;
+}
+
+.useEffects {
+  background-color: #FF79C6;
+}
+
+.useEffects div {
+  margin: 0 auto;
+  display: flex;
+  gap: 5px;
+}
+
+.useRefs {
+  background-color: #8BE9FD;
+}
+
+.useRefs p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.useReduces {
+  gap: 10px;
+}
+
+.useReduces p {
+  font-size: 1.2rem;
+}

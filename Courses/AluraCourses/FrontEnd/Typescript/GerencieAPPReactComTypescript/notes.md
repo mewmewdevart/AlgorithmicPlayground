@@ -12,6 +12,10 @@
 
 O React TypeScript combina React, uma biblioteca Typescript para construir interfaces de usuário, com TypeScript, que adiciona tipagem estática ao código.
 
+O REACT NÃO É REATIVO!! Ele é declarativo e não reativo : 
+
+No React, a abordagem é declarativa, não reativa. Diferente de paradigmas reativos, o React exige uma abordagem mais explícita. Analogamente a uma planilha, no React, as atualizações não são automáticas. A necessidade de estado é evidente ao tentar modificar tarefas sem `state`, onde a interface não é atualizada.  <br> A criação manual de um estado "observado" por componentes é crucial, exigindo declaração ou inscrição para detecção de mudanças e atualização da interface. Essa abordagem proporciona controle sobre o fluxo de dados e clareza no entendimento do comportamento do aplicativo.
+
 **Prós:**
 
 1. **Componentização:** Facilita dividir a interface do usuário em componentes reutilizáveis.
@@ -345,9 +349,10 @@ import BotaoStyle from './Botao.module.scss';
 import ItemStyle from './Item.module.scss';
 ```
 
-#### Props
 
-Em React, `props` (abreviação de propriedades) são utilizadas para passar dados de um componente pai para um componente filho. Isso permite que os componentes sejam configuráveis e reutilizáveis, pois podem receber diferentes dados de entrada através de props.
+#### Props no React
+
+No React, `props` (abreviação de propriedades) são utilizadas para passar dados de um componente pai para um componente filho. Isso permite que os componentes sejam configuráveis e reutilizáveis, pois podem receber diferentes dados de entrada através de props.
 
 No exemplo fornecido:
 
@@ -364,7 +369,7 @@ class Formulario extends React.Component {
 }
 ```
 
-Neste trecho de código, um componente `Formulario` está renderizando um componente `Botao` e passando uma propriedade `texto` com o valor "Adicionar".
+Neste trecho de código, um componente `Formulario` está renderizando um componente `Botao` e passando uma propriedade `texto` com o valor "Adicionar."
 
 ```typescript
 // Botao/index.tsx
@@ -388,7 +393,7 @@ No componente `Botao`, a propriedade `texto` é acessada através de `this.props
 
 Existem duas maneiras comuns de passar dados para um componente filho em React:
 
-1. **Atributos Diretamente Vinculados**: Como `texto="Adicionar"`, são acessíveis dentro do componente filho através de `this.props.texto`.
+1. **Atributos Diretamente Vinculados**: Como `texto="Adicionar,"` são acessíveis dentro do componente filho através de `this.props.texto`.
 
 2. **Props.children**: Permite passar elementos filhos diretamente para o componente filho. Por exemplo:
 
@@ -400,10 +405,18 @@ Existem duas maneiras comuns de passar dados para um componente filho em React:
 
 Nesse caso, o texto "Adicionar" seria acessível dentro do componente `Botao` através de `this.props.children`.
 
-Portanto, `props` em React são essenciais para a comunicação entre componentes, permitindo uma estrutura de aplicativo mais modular e flexível. 
+Portanto, `props` em React são essenciais para a comunicação entre componentes, permitindo uma estrutura de aplicativo mais modular e flexível.
 
 ```typescript
 interface BotaoProps {
   children: ReactNode; // Isso especifica que os children podem ser qualquer nó React
 }
 ```
+
+Lembre-se de que os componentes React são criados utilizando JSX, não HTML. O React cria um Virtual DOM (VDOM) em vez de um DOM real, atualizando-o apenas quando ocorrem alterações dentro do Virtual DOM.
+
+
+
+
+
+

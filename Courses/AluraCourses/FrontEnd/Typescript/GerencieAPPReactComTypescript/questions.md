@@ -92,6 +92,39 @@ Dessa forma conseguimos importar dizendo onde nosso módulo está e colocando as
 Qual é o prop padrão que o React disponibiliza para poder utilizar JSX como filho de um componente React?
 
 **Resposta**
+
 children
 
-Isso! o React proporciona a props children para que a gente consiga colocar JSX dentro do componente.
+o React proporciona a props children para que a gente consiga colocar JSX dentro do componente.
+
+
+## useStes
+Fazendo esse código aqui:
+```typescript
+ const [texto, setTexto] = useState('meu estado');
+```
+Qual a opção correta sobre qual valor é retornado pela função useState?
+
+**Resposta**
+
+Um array, com o primeiro index sendo o estado e o segundo sendo à função de mudar o estado.
+A função useState retorna um array para que possamos desestruturar e pegar os valores de forma simples, apenas utilizando [estado, funcaoQueMudaOEstado].
+
+
+## 04 : Reaproveitamento de interfaces
+
+Qual a alternativa correta que reaproveita os tipos da interface Props1 para a interface Props2?
+
+**Resposta**
+interface Props2 extends Props1 {...}
+
+Dessa forma nós conseguimos herdar todos os tipos de Props1 dentro de Props2!
+
+## 05 : Reagindo ao estado
+
+Precisamos reagir ao estado selecionado para fazer uma mudança no nosso componente. Qual alternativa que define a forma correta de reagir a essa mudança?
+
+**Resposta**
+Conseguimos com o useEffect "observar" a mudança do estado e, sempre que ele mudar, executar uma função fazendo alguma alteração.
+
+
