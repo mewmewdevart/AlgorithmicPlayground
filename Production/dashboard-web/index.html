@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Web</title>
+    <script>
+      // Function to dynamically change the title when the page is hidden
+      function changeTitleIfHidden() {
+        if (document.hidden) {
+          document.title = "Return to your DashBoard";
+        } else {
+          document.title = "Dashboard Web";
+        }
+      }
+
+      document.addEventListener("visibilitychange", changeTitleIfHidden);
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
