@@ -51,3 +51,12 @@ const Overlay = styled.div`
 `;
 
 Essa é a estrutura base que queremos. O código utiliza a biblioteca styled-components para criar um componente chamado Overlay, que possui as propriedades de estilo adequadas para um overlay de modal de zoom. O background-color define a cor de fundo com uma transparência de 70% (rgba(0, 0, 0, 0.7)), e as propriedades de position e top, right, bottom, left são utilizadas para posicionar o overlay de forma fixa e cobrir toda a área visível da página.
+
+
+## 4. Filtrando tudo
+Você está desenvolvendo uma aplicação React que exibe uma lista de produtos e deseja implementar a funcionalidade de filtro. Para isso, você decide utilizar os métodos map() e useEffect(). Qual é a finalidade desses métodos no contexto do filtro de produtos?
+
+**Resposta**
+O método map() é usado para renderizar os elementos da lista de produtos, enquanto o useEffect() é usado para aplicar o filtro nos produtos quando ocorrerem mudanças no estado do filtro.
+
+O método map() é usado para renderizar os elementos da lista de produtos, enquanto o useEffect() é usado para aplicar o filtro nos produtos quando ocorrerem mudanças no estado do filtro.
