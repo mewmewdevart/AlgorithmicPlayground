@@ -7,7 +7,7 @@ const MenuEstilizado = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
+  width: 230px;
   min-height: 100vh;
 `;
 
@@ -15,13 +15,14 @@ const LogoEstilizado = styled.img`
 padding-top: 10px;
   width: 112px;
   height: 112px;
+  margin-bottom: 5px;
 `;
 
 const MenuComponent = () => {
   return (
     <>
       <MenuEstilizado>
-        <LogoEstilizado src="../../../public/logo.png" alt="" />
+        <LogoEstilizado src="/logo.png" alt="" />
         <ConjuntoListaEstilizada />
       </MenuEstilizado>
     </>

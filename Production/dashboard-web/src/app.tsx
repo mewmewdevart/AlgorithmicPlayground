@@ -4,7 +4,7 @@ import styled from "styled-components";
 import "./app.css";
 
 const BgEstilizado = styled.div`
-  background-color: var( --secondaryBrandColor);
+  background-color: rgba(243, 244, 248, 1);
   min-height: 100vh;
 `
 

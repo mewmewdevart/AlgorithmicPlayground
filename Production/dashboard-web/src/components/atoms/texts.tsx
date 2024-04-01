@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const TextoStyled = styled.p`
     height: 24px;
     text-align: center;
-    line-height: 1.22;
     text-transform: capitalize;
+    margin-bottom: 5px;
 `;
 
 const TextComponent = ({  typeOfText }: {  typeOfText: string }) => {
