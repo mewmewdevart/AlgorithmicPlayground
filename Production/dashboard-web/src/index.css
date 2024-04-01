@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --brandColor: #9E6EFE; /* Violet */
+    --secondaryBrandColor: #E2C4FF; /* Light Violet */
+
+    --dark-10: #262626; /* Dark 10 */
+    --dark-20: #414141; /* Dark 20 */
+    --dark-30: #737373; /* Dark 30 */
+    --dark-40: #FFFFFF; /* Dark 40 (white?) */
+
+    --warningGreen: rgb(11, 176, 123); /* Main warning Green */
+    --warningGreenShadow: rgba(11, 176, 123, 0.06); /* Shadow of warning Green */
+
+    --warningRed: rgb(240, 61, 61); /* Main warning Red */
+    --warningRedShadow: rgba(240, 61, 61, 0.06); /* Shadow of warning Red */
+
+    --warningYellow: rgb(255, 206, 82); /* Main warning Yellow */
+    --warningYellowShadow: rgba(255, 206, 82, 0.06); /* Shadow of warning Yellow */
+
+    /* Font Variables */
+    --font-family-poppins: "Poppins", sans-serif;
+
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    --font-style-normal: normal;
+    --font-style-italic: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

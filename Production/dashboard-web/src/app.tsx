@@ -1,13 +1,17 @@
-import { Theme } from "@radix-ui/themes";
-import IconsComponent from "./components/atoms/icons.tsx";
+import MenuComponent from "./components/organisms/menu";
+import styled from "styled-components";
+
+import "./app.css";
+
+const BgEstilizado = styled.div`
+  background-color: var( --secondaryBrandColor);
+  min-height: 100vh;
+`
 
 export function App() {
-  let typeOfIcon: string = "dashboard";
-
   return (
-    <Theme>
-      <h1>Olá</h1>
-      <IconsComponent typeOfIcon={typeOfIcon}/> 
-    </Theme>
+    <BgEstilizado>
+      <MenuComponent/>
+    </BgEstilizado>
   );
 }

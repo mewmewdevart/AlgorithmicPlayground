@@ -15,7 +15,7 @@ const IconsComponent = ({ typeOfIcon }: { typeOfIcon: string }) => {
   const iconElements = filteredIcons.map((icon, index) => (
     <div key={index}>
       {/* Use Svg as a component */}
-      <SvgStyled dangerouslySetInnerHTML={{ __html: icon.icon }} />
+      <SvgStyled dangerouslySetInnerHTML={{ __html: icon.icon }} aria-label={"Icone : " + icon.name} />
     </div>
   ));
 
