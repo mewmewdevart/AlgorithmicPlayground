@@ -94,3 +94,83 @@ De acordo com os seus conhecimentos a respeito do Flexbox no Tailwind, o código
 
 O código deverá estar assim: <div class="flex">.
 Certo! Para que possamos construir o layout que a estudante deseja, precisamos adicionar na linha 2 do código a classe flex na div, com isso os elementos irão se dispor com o flex-direction: row (um ao lado do outro).
+
+## 4. Qual é a classe?
+
+Gabriela segue avançando em seu projeto pessoal, no momento está praticando como estilizar as bordas e sombras com Tailwind e pediu nossa ajuda para construir esse layout:
+
+Exemplo:
+![Imagem Exemplo](https://caelum-online-public.s3.amazonaws.com/2415-tailwind/04/aula4-img1.png)
+
+No momento seu projeto encontra-se assim:
+
+```html
+<body>
+  <div class="flex w-fit m-auto my-10">
+    <img
+      class="h-44"
+      src="https://img.freepik.com/free-photo/website-development-developer-working-program-codes-office-computer-program-programmer-workplace-programming-code-software-source-code_372999-389.jpg?w=1380"
+      alt="codigo json"
+    />
+    <div
+      class="p-10 flex flex-col bg-gradient-to-r from-pink-300 to-slate-400 justify-center h-44"
+    >
+      <p class="text-6xl font-black text-primary font-titulo">Gabriela</p>
+      <p class="text-4xl">Desenvolvedora Front-end</p>
+    </div>
+  </div>
+</body>
+```
+
+![Imagem Exemplo](https://caelum-online-public.s3.amazonaws.com/2415-tailwind/04/aula4-img2.png)
+
+Sendo assim, as classes que irão construir o layout que Gabriela deseja, é:
+
+**Resposta**
+
+Para construir as bordas e sombreamentos devemos utilizar a classe rounded-r-xl na linha 4 do código e a classe utilitária shadow-2xl na linha 2 do código.
+
+Alternativa correta! Certo! A classe rounded-r-xl irá produzir um arredondamento das bordas à direita e a classe shadow-2xl irá construir o sombreamento do elemento main. O código ficará assim:
+
+## 5. Complete a animação
+
+Gabriela se inspirou na Alura Newsletter e decidiu aplicar a animação do sino balançando em seu projeto pessoal, criando esse efeito nos links das suas redes sociais.
+
+Mas antes de aplicar, ela gostaria de saber se você, assim como ela, também aprendeu a fazer as configurações no tailwindConfig dessa animação.
+
+Sendo assim, analise o código de Gabriela e assinale as alternativas que preenchem com os trechos de código corretos os espaços que estão vazios.
+
+```html
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                primary: '#f2dae7'
+            },
+            fontFamily: {
+                titulo: ['Vast Shadow', 'cursive']                    
+            },
+            _________ {
+                sino_kf: {
+                    '0%, 100%': {
+                        transform: 'rotate(-10deg)'
+                    },
+                    '___': {
+                        transform: 'rotate(10deg)'
+                    },
+                }
+            },
+            animation: {
+                sino: 'sino_kf 0.31s ____________ infinite'
+            },
+        }
+    }
+}
+```
+
+**Resposta**
+
+- Na linha 15 do código, o trecho que completa corretamente é 50% e na linha 21, o trecho é ease-in-out. <br> Na animação do sino, temos modificações da posição da rotação quando a animação inicia e termina (0% e 100%) e também na metade da animação, o que é representado pelos 50%. E a animação do sino propriamente dita, tem a diretiva ease-in-out, que faz com que a mudança aconteça lentamente tanto no início quanto no final, e acelere apenas no meio.
+
+- Na linha 10 do código, o trecho que completa corretamente é: keyframes: <br>
+Keyframes é a palavra chave utilizada no Tailwind para passar as configurações de tema da animação.

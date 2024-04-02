@@ -23,25 +23,36 @@
               lobster: ["Lobster", "sans-serif"],
               poppins: ["Poppins", 'sans-serif']
             },
+            keyframes: {
+                        sino_kf: {
+                            '0%, 100%': {
+                                transform: 'rotate(-10deg)'
+                            },
+                            '50%': {
+                                transform: 'rotate(10deg)'
+                            },
+                        }
+                    },
+                    animation: {
+                        sino: 'sino_kf 0.31s ease-in-out infinite'
+                    },
           },
         },
       };
     </script>
   </head>
-  <body class="h-screen  flex flex-col justify-center items-center"></body>
-        <header class="flex w-6/12 bg-gradient-to-r from-blue-400 to-purple-400">
-            <img class="w-6/12" src="https://cpage.sfsu.edu/sites/default/files/styles/sf_state_1440x564/public/images/codingart-laptop-news.jpg?h=93c8ae4a&itok=f172lD0h" alt="">
-            <div
-              class="pl-5 pt-5 m-auto my-10 w-6/12 flex flex-col gap-3"
-            >
-              <p class="text-3xl font-lobster text-white">Larissa</p>
-              <p class="font-poppins text-white text-1xl">Desenvolvedora Front-end</p>
-            </div>
-        </header>
-        <section class=" w-6/12 bg-white h-screen">
-        </section>
-        <footer class="bg-gradient-to-r from-blue-400 to-purple-400 w-6/12 h-20">
-            <h1>oi</h1>
-        </footer>
-  </body>
+  <body class="h-screen flex flex-col justify-center items-center">
+    <header class="flex flex-col md:flex-row w-full md:w-6/12 bg-gradient-to-r from-blue-400 to-purple-400 rounded-r-xl">
+        <img class="w-full md:w-6/12" src="https://cpage.sfsu.edu/sites/default/files/styles/sf_state_1440x564/public/images/codingart-laptop-news.jpg?h=93c8ae4a&itok=f172lD0h" alt="">
+        <div class="pl-5 pt-5 m-auto my-10 w-full md:w-6/12 flex flex-col gap-3">
+            <p class="text-3xl font-lobster text-white">Larissa</p>
+            <p class="font-poppins text-white text-1xl">Desenvolvedora Front-end</p>
+            <ul class="flex gap-3 group">
+              <li class="text-gray-600 hover:text-white hover:font-bold cursor-pointer group-hover:animate-sino">Github</li>
+              <li class="text-gray-600 hover:text-white hover:font-bold cursor-pointer group-hover:animate-sino">Linkedin</li>
+              <li class="text-gray-600 hover:text-white hover:font-bold cursor-pointer group-hover:animate-sino">Email</li>
+            </ul>
+        </div>
+    </header>
+</body>
 </html>

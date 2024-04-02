@@ -4,21 +4,34 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Alura Newsletter</title>
+    <title>Gatonalta Newsletter</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              azul: {
-                claro: "#C5DFFF",
-                escuro: "#061E3C",
-                hover: "#1057b0",
+              palleta: {
+                claro: "#AFB4C8",
+                escuro: "#555A66",
+                hover: "#F7991C",
               },
             },
             fontFamily: {
                 inter: ["Inter", 'sans-serif']
+            },
+            keyframes: {
+              sino_kf: {
+                '0%, 100%': {
+                  transform: 'rotate(-10deg)'
+                },
+                '50%': {
+                  transform: 'rotate(10deg)'
+                }
+              }
+            },
+            animation: {
+              sino: 'sino_kf 0.31s ease-in-out infinite'
             }
           },
         },
@@ -26,20 +39,20 @@
     </script>
   </head>
 
-  <body class="bg-azul-claro font-inter flex justify-center items-center h-screen">
-    <main class="flex px-6">
-      <section class="bg-azul-escuro hidden">
+  <body class="bg-palleta-claro font-inter flex justify-center items-center h-screen">
+    <main class="flex px-6 drop-shadow-2xl lg:w-3/4">
+      <section class="bg-palleta-escuro hidden lg:block w-1/2">
         <img
-          class=""
-          src="image/icone-mergulhador.svg"
+          class="p-6 m-auto"
+          src="image/cat1.png"
           alt="icone de mergulhador"
         />
       </section>
 
-      <section class="bg-white p-10 gap-6 flex flex-col">
-        <div class="">
+      <section class="bg-white p-10 gap-6 flex flex-col rounded-lg lg:w-1/2 justify-center lg:rounded-l-none">
+        <div class="self-center relative group cursor-pointer">
           <svg
-            class=""
+            class="fill-palleta-escuro absolute top-0 left-1 opacity-0 group-hover:opacity-100 group-hover:animate-ping"
             width="35"
             height="20"
             viewBox="0 0 44 20"
@@ -59,7 +72,7 @@
               d="M6.00014 11.0928C5.69804 11.1802 5.49893 11.3671 5.00688 12.0303C3.94497 13.4651 3.16455 15.102 2.62215 17.0463C2.44822 17.6672 2.44822 17.9838 2.62215 18.442C2.72743 18.7223 2.92882 18.9906 3.13022 19.1202C3.63143 19.4427 4.27453 19.2106 4.58349 18.5987C4.67274 18.4209 4.69792 18.3425 4.85583 17.7758C4.97484 17.3537 5.25176 16.6182 5.48062 16.1208C5.8674 15.2768 6.22442 14.692 6.8309 13.9083C7.21997 13.4018 7.2932 13.2662 7.35271 12.9436C7.48316 12.2111 7.24743 11.5208 6.76453 11.2164C6.50134 11.0506 6.27248 11.0144 6.00014 11.0928Z"
             />
           </svg>
-          <svg class="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-12 h-12 fill-palleta-claro stroke-palleta-escuro group-hover:animate-sino" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -70,19 +83,19 @@
         </div>
 
         <div class="text-center ">
-          <h1 class="text-4xl mb-2">Alura Newsletter</h1>
-          <p class="text-gray-600 mb-2">Mergulhe em uma plataforma que <br> respira tecnologia!</p>
+          <h1 class="text-4xl mb-2 font-bold">Gatonalta Newsletter</h1>
+          <p class="text-gray-600 mb-2">Mergulhe em uma plataforma que <br> respira miados!</p>
         </div>
 
         <form>
           <label class="text-sm font-bold text-gray-700 mb-2" for="email">Email</label>
           <input
-            class="text-sm w-full mb-4 pl-3"
+            class="text-sm w-full mb-4 pl-3 rounded border py-2 shadow focus:outline-none hover:border-palleta-claro hover:ring-1 hover:ring-palleta-escuro focus:border-palleta-escuro focus:ring-1 focus:ring-palleta-escuro"
             id="email"
             type="email"
             placeholder="Digite seu endereço de email"
           />
-          <button class="font-bold text-white bg-azul-escuro w-full py-2" type="button">Inscreva-se</button>
+          <button class="font-bold text-white bg-palleta-escuro w-full py-2 rounded-full shadow-2xl hover:bg-palleta-hover duration-150" type="button">Inscreva-se</button>
         </form>
       </section>
     </main>
