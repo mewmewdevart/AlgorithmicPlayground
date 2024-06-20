@@ -1,0 +1,24 @@
+header {
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+
+header img {
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+}
+
+header h1 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  color: #61dafb;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #aed2ff;
+  font-family: "Roboto", sans-serif;
+}
