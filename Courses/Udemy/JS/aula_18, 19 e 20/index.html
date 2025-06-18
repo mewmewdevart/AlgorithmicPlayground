@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            color: violet;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        form input {
+            padding: 5px 10px;
+        }
+        button {
+            padding: 5px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form action="createObject" method="post">
+        <input type="text" placeholder="Name" class="name">
+        <input type="text" placeholder="Sobrenome" class="lastname">
+        <input type="text" placeholder="Peso" class="weight">
+        <input type="text" placeholder="Altura" class="height">
+
+        <button>Enviar</button>
+    </form>
+
+    <div>
+        <pre class="result"></pre>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>

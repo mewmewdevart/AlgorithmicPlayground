@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript no HTML</title>
+
+    <!-- 
+        Evite usar scripts aqui diretamente SEM o atributo 'defer' ou 'async',
+        pois o JavaScript será executado antes do carregamento completo do HTML da página.
+        Isso pode retardar o carregamento da interface, especialmente se o script for pesado.
+    -->
+    <script>
+        console.log("Hello!"); // Este será executado primeiro, antes do carregamento do <body>
+    </script>
+
+    <!-- 
+        BOA PRÁTICA: Caso precise carregar um arquivo JS aqui, use 'defer':
+        <script src="script.js" defer></script>
+        O 'defer' garante que o script só será executado após o HTML completo ser carregado.
+    -->
+</head>
+
+<body>
+    <!-- Conteúdo da página poderia estar aqui -->
+
+    <!-- 
+        Este é o local ideal para inserir scripts diretamente no HTML.
+        Como o navegador já carregou todo o HTML acima, o JavaScript é executado sem bloquear o carregamento da página.
+    -->
+    <script>
+        console.log("Bye!"); // Este será executado após o carregamento do <body>
+    </script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
