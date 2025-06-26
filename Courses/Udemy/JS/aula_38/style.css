@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    background-color: pink;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    width: 50%;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #9B7EBD;
+    padding: 20px;
+}
+
+.container .paragrafos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

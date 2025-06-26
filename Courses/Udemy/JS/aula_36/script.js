@@ -10,8 +10,6 @@ const pessoa = {
     idade: '25'
 }
 
-
-
 for (let chave in pessoa){
    // console.log(pessoa.nome);  => Mesma coisa que pessoa['nome]
     console.log(chave, pessoa[chave])
