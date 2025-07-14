@@ -1,0 +1,70 @@
+name: Lint, Teste e Build no Push
+on: push
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3 
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd "Courses/Udemy/github-workflows/workflow-project"
+          npm install
+
+      - name: Lint the code
+        run: |
+          cd "Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)"
+          npm run lint
+
+  test:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3 
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd "Courses/Udemy/github-workflows/workflow-project"
+          npm install
+
+      - name: Run the tests
+        run: |
+          cd "Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)"
+          npm test
+
+  build:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3 
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd "Courses/Udemy/github-workflows/workflow-project"
+          npm install
+
+      - name: Run the build
+        run: |
+          cd "Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)"
+          npm run build
+      - name: Deploy to production
+        run: |
+            echo "Deploying to production server..."
