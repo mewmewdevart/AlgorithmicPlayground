@@ -1,0 +1,26 @@
+name: Display Issue Details
+
+# Trigger: runs when an issue is opened, edited, or closed
+on:
+  issues:
+    types: [opened, edited, closed, reopened, labeled, unlabeled]
+
+jobs:
+  display-details:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display details of the Issue event
+        run: |
+          echo "🔎 Issue Event Details"
+          echo "------------------------------------"
+          echo "Event: ${{ github.event_name }}"
+          echo "Action: ${{ github.event.action }}"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Repository: ${{ github.repository }}"
+          echo ""
+          echo "📖 Issue Information:"
+          echo "Number: #${{ github.event.issue.number }}"
+          echo "Title: ${{ github.event.issue.title }}"
+          echo "Body:"
+          echo "${{ github.event.issue.body }}"
