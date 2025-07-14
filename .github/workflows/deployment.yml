@@ -1,70 +1,83 @@
-name: Lint, Teste e Build no Push
+name: Lint, Test, and Build on Push
+
 on: push
+
 jobs:
   lint:
     runs-on: ubuntu-latest
+    # Define o diretório de trabalho padrão para todos os comandos 'run' neste job
+    defaults:
+      run:
+        working-directory: 'Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)'
     steps:
       - name: Get the code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Node.js
-        uses: actions/setup-node@v3 
+        uses: actions/setup-node@v4 
         with:
           node-version: '18'
+          # Cache para acelerar a instalação de dependências
+          cache: 'npm'
+          cache-dependency-path: 'Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)/package-lock.json'
 
       - name: Install dependencies
-        run: |
-          cd "Courses/Udemy/github-workflows/workflow-project"
-          npm install
+        run: npm install
 
       - name: Lint the code
-        run: |
-          cd "Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)"
-          npm run lint
+        run: npm run lint
 
   test:
     runs-on: ubuntu-latest
+    # Garante que este job só rode após o 'lint' ser concluído com sucesso
     needs: lint
+    # Define o diretório de trabalho padrão para todos os comandos 'run' neste job
+    defaults:
+      run:
+        working-directory: 'Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)'
     steps:
       - name: Get the code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Node.js
-        uses: actions/setup-node@v3 
+        uses: actions/setup-node@v4 
         with:
           node-version: '18'
+          # Cache para acelerar a instalação de dependências
+          cache: 'npm'
+          cache-dependency-path: 'Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)/package-lock.json'
 
       - name: Install dependencies
-        run: |
-          cd "Courses/Udemy/github-workflows/workflow-project"
-          npm install
+        run: npm install
 
       - name: Run the tests
-        run: |
-          cd "Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)"
-          npm test
+        run: npm test
 
   build:
     runs-on: ubuntu-latest
+    # Garante que este job só rode após o 'test' ser concluído com sucesso
     needs: test
+    # Define o diretório de trabalho padrão para todos os comandos 'run' neste job
+    defaults:
+      run:
+        working-directory: 'Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)'
     steps:
       - name: Get the code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Node.js
-        uses: actions/setup-node@v3 
+        uses: actions/setup-node@v4 
         with:
           node-version: '18'
+          # Cache para acelerar a instalação de dependências
+          cache: 'npm'
+          cache-dependency-path: 'Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)/package-lock.json'
 
       - name: Install dependencies
-        run: |
-          cd "Courses/Udemy/github-workflows/workflow-project"
-          npm install
+        run: npm install
 
       - name: Run the build
-        run: |
-          cd "Courses/Udemy/github-workflows/workflow-project/04 Practice Project (Start)"
-          npm run build
+        run: npm run build
+        
       - name: Deploy to production
-        run: |
-            echo "Deploying to production server..."
+        run: echo "Deploying to production server..."
