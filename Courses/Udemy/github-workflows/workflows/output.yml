@@ -1,0 +1,19 @@
+name: Output information
+
+on: workflow_dispatch
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Output GitHub Context
+        # Aqui usamos o comando `echo` para imprimir uma variável especial `${{ toJSON(github) }}`
+        # que é uma função do GitHub Actions para transformar objetos em texto JSON.
+        # 
+        # O objeto `github` contém diversas informações úteis sobre o repositório, evento,
+        # workflow, usuário que iniciou o workflow, branch atual, etc.
+        #
+        # Essa função `toJSON()` é um helper que transforma esse objeto complexo em uma string JSON,
+        # facilitando visualizar no log todas as informações que o GitHub Actions oferece naquele momento.
+        run: echo "${{ toJSON(github) }}"

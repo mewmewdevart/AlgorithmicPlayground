@@ -1,0 +1,50 @@
+name: Test and Deploy
+
+on: [push, workflow_dispatch]  # O workflow é acionado quando ocorre um push no repositório : pode adicionar mais eventos, como pull_request, etc.
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3  # uses = executa uma action pronta (neste caso, clona o repositório)
+        # with:
+        #   fetch-depth: 0  # Ensures all history is fetched : https://github.com/features/actions
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3  # Instala Node.js
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd "02 Starting Project"
+          npm install
+
+      - name: Run tests
+        run: |
+          cd "02 Starting Project"
+          npm test
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test  # Se quiser que mais de um job ocorra antes de executar o deplou, adicione ele dentro de [test, job2] ...
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v3 
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3  # Instala Node.js
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd "02 Starting Project"
+          npm install
+      - name: Build the project
+        run: |
+          cd "02 Starting Project"
+          npm run build
+      - name: Deploy to production
+        run: |
+            echo "Deploying to production server..."

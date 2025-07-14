@@ -1,0 +1,18 @@
+name: First Workflow
+
+# Evento que dispara o workflow manualmente pela interface do GitHub
+on: workflow_dispatch
+
+# Jobs: conjunto de etapas que serão executadas em um runner
+jobs:
+  first-job:
+    runs-on: ubuntu-latest  # Ambiente onde o job será executado
+
+    # Steps: passos executados dentro do job, em ordem
+    steps:
+      - name: Print greeting
+        run: |
+            echo "Hello World!"
+            echo "Vivemos em uma ilusão!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
